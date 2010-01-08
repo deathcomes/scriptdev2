@@ -189,6 +189,8 @@ struct MANGOS_DLL_DECL instance_nexus : public ScriptedInstance
             {
                 if (pCreature->isAlive())
                     pCreature->RemoveAurasDueToSpell(SPELL_FROZEN_PRISON);
+                    pCreature->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
+                    pCreature->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
             }
         }
 
